@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Admin Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+    <div id="toastContainer"></div>
+
+    <div class="admin">
+
+        <div class="topbar">
+            <div class="brand"><span class="dot"></span> Emergency Dashboard</div>
+            <div style="display:flex; gap:10px; align-items:center;">
+                <a class="nav-link" href="index.html">← Rudi kwenye App</a>
+                <button class="logout-btn" id="logoutBtn">🚪 Logout</button>
+            </div>
+        </div>
+
+        <div class="hero" style="margin-bottom:20px;">
+            <h1>🚨 Emergency Requests</h1>
+            <p>Fuatilia na simamia dharura zote zinazoingia kwa muda halisi.</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card stat-total">
+                <div class="num" id="statTotal">0</div>
+                <div class="label">Jumla</div>
+            </div>
+            <div class="stat-card stat-pending">
+                <div class="num" id="statPending">0</div>
+                <div class="label">Pending</div>
+            </div>
+            <div class="stat-card stat-responding">
+                <div class="num" id="statResponding">0</div>
+                <div class="label">Responding</div>
+            </div>
+            <div class="stat-card stat-resolved">
+                <div class="num" id="statResolved">0</div>
+                <div class="label">Resolved</div>
+            </div>
+        </div>
+
+        <div id="adminMap"></div>
+
+        <div class="toolbar">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="All">Zote</button>
+                <button class="filter-btn" data-filter="Pending">Pending</button>
+                <button class="filter-btn" data-filter="Responding">Responding</button>
+                <button class="filter-btn" data-filter="Resolved">Resolved</button>
+            </div>
+            <button class="refresh-btn" id="refreshBtn">
+                <span class="spin-icon">🔄</span> Refresh
+            </button>
+        </div>
+
+        <div id="emergencyList">
+            <p class="empty-state">Inapakia emergencies...</p>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

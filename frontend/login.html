@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login — Emergency Response</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="toastContainer"></div>
+
+    <div class="login-wrap">
+        <div class="login-card">
+            <div class="lock-icon">🔒</div>
+            <h1>Admin Login</h1>
+            <p class="sub">Ingia ili kufikia Emergency Dashboard</p>
+
+            <form id="loginForm">
+                <div class="field">
+                    <label for="username">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="admin"
+                        autocomplete="username"
+                        required
+                        style="width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,0.04);color:var(--text);font-size:0.95rem;font-family:inherit;outline:none;"
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="••••••••"
+                        autocomplete="current-password"
+                        required
+                        style="width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,0.04);color:var(--text);font-size:0.95rem;font-family:inherit;outline:none;"
+                    >
+                </div>
+
+                <button type="submit" id="loginBtn">Login</button>
+            </form>
+
+            <p class="login-error" id="loginError"></p>
+
+            <a class="login-back" href="index.html">← Rudi kwenye App</a>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

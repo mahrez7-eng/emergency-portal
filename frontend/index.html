@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Response</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="toastContainer"></div>
+
+    <div class="app">
+
+        <div class="topbar">
+            <div class="brand"><span class="dot"></span> Emergency Response</div>
+            <a class="nav-link" href="login.html"> Admin →</a>
+        </div>
+
+        <div class="hero">
+            <h1> Msaada wa Dharura</h1>
+            <p>Bonyeza kitufe, tutatuma location yako moja kwa moja kwa timu ya uokoaji.</p>
+        </div>
+
+        <div class="card">
+
+            <div class="field">
+                <label for="emergencyType">Chagua aina ya emergency</label>
+                <select id="emergencyType">
+                    <option value="Medical Emergency">🚑 Medical Emergency</option>
+                    <option value="Police Emergency">🚓 Police Emergency</option>
+                    <option value="Fire Emergency">🚒 Fire Emergency</option>
+                    <option value="Accident">⚠️ Accident</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="emergencyDescription">Eleza tatizo (si lazima)</label>
+                <textarea
+                    id="emergencyDescription"
+                    placeholder="Mfano: Mtu amepata ajali karibu na kituo cha mabasi..."
+                    rows="4"
+                ></textarea>
+            </div>
+
+        </div>
+
+        <div class="sos-wrap">
+            <button id="sosButton">
+                <span class="icon">🚨</span>
+                <span>EMERGENCY</span>
+            </button>
+        </div>
+        <p class="sos-hint">Bonyeza tu ukiwa katika hali ya dharura ya kweli</p>
+
+        <div id="map"></div>
+
+        <div id="emergencyInfo" class="emergency-info card">
+            <h2>📋 Emergency Request Yako</h2>
+
+            <div class="info-row"><span>Aina</span><span id="typeSummary">-</span></div>
+            <div class="info-row"><span>Latitude</span><span id="latitude">-</span></div>
+            <div class="info-row"><span>Longitude</span><span id="longitude">-</span></div>
+            <div class="info-row"><span>Muda</span><span id="emergencyTime">-</span></div>
+            <div class="info-row"><span>Status</span><span id="status" class="badge badge-pending">Pending</span></div>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
