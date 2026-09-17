@@ -23,7 +23,7 @@ const ALLOWED_STATUSES = ["Pending", "Responding", "Resolved"];
 // project like this. Tokens live in memory, so they reset when the server
 // restarts (admins just log in again).
 const ADMIN_USERNAME = process.env.ADMIN_USERNAME || "admin";
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "kiplada";
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "admin";
 const validTokens = new Set();
 
 function requireAdminAuth(req, res, next) {
