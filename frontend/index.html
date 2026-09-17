@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sw">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,14 +20,14 @@
         </div>
 
         <div class="hero">
-            <h1> Msaada wa Dharura</h1>
-            <p>Bonyeza kitufe, tutatuma location yako moja kwa moja kwa timu ya uokoaji.</p>
+            <h1> Emergency Assistance</h1>
+            <p>Press the button, we will send your location directly to the rescue team.</p>
         </div>
 
         <div class="card">
 
             <div class="field">
-                <label for="emergencyType">Chagua aina ya emergency</label>
+                <label for="emergencyType">Select the type of emergency</label>
                 <select id="emergencyType">
                     <option value="Medical Emergency">🚑 Medical Emergency</option>
                     <option value="Police Emergency">🚓 Police Emergency</option>
@@ -37,10 +37,10 @@
             </div>
 
             <div class="field">
-                <label for="emergencyDescription">Eleza tatizo (si lazima)</label>
+                <label for="emergencyDescription">Explain the problem (not necessary)</label>
                 <textarea
                     id="emergencyDescription"
-                    placeholder="Mfano: Mtu amepata ajali karibu na kituo cha mabasi..."
+                    placeholder="e.g: Someone had and accident near at kijangwani bus stand..."
                     rows="4"
                 ></textarea>
             </div>
@@ -53,17 +53,17 @@
                 <span>EMERGENCY</span>
             </button>
         </div>
-        <p class="sos-hint">Bonyeza tu ukiwa katika hali ya dharura ya kweli</p>
+        <p class="sos-hint">Just click when youre in a real emergency situation</p>
 
         <div id="map"></div>
 
         <div id="emergencyInfo" class="emergency-info card">
-            <h2>📋 Emergency Request Yako</h2>
+            <h2>📋 Your Emergency Request</h2>
 
-            <div class="info-row"><span>Aina</span><span id="typeSummary">-</span></div>
+            <div class="info-row"><span>Type</span><span id="typeSummary">-</span></div>
             <div class="info-row"><span>Latitude</span><span id="latitude">-</span></div>
             <div class="info-row"><span>Longitude</span><span id="longitude">-</span></div>
-            <div class="info-row"><span>Muda</span><span id="emergencyTime">-</span></div>
+            <div class="info-row"><span>Time</span><span id="emergencyTime">-</span></div>
             <div class="info-row"><span>Status</span><span id="status" class="badge badge-pending">Pending</span></div>
         </div>
 

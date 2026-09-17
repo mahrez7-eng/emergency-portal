@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sw">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,20 +17,20 @@
         <div class="topbar">
             <div class="brand"><span class="dot"></span> Admin Dashboard</div>
             <div style="display:flex; gap:10px; align-items:center;">
-                <a class="nav-link" href="index.html">← Rudi kwenye App</a>
+                <a class="nav-link" href="index.html">← Back to App</a>
                 <button class="logout-btn" id="logoutBtn">🚪 Logout</button>
             </div>
         </div>
 
         <div class="hero" style="margin-bottom:20px;">
             <h1>🚨 Emergency Requests</h1>
-            <p>Fuatilia na simamia dharura zote zinazoingia kwa muda halisi.</p>
+            <p>Monitor and manage all incoming emergencies in real-time.</p>
         </div>
 
         <div class="stats-grid">
             <div class="stat-card stat-total">
                 <div class="num" id="statTotal">0</div>
-                <div class="label">Jumla</div>
+                <div class="label">General</div>
             </div>
             <div class="stat-card stat-pending">
                 <div class="num" id="statPending">0</div>
@@ -50,7 +50,7 @@
 
         <div class="toolbar">
             <div class="filters">
-                <button class="filter-btn active" data-filter="All">Zote</button>
+                <button class="filter-btn active" data-filter="All">All</button>
                 <button class="filter-btn" data-filter="Pending">Pending</button>
                 <button class="filter-btn" data-filter="Responding">Responding</button>
                 <button class="filter-btn" data-filter="Resolved">Resolved</button>
@@ -61,7 +61,7 @@
         </div>
 
         <div id="emergencyList">
-            <p class="empty-state">Inapakia emergencies...</p>
+            <p class="empty-state">loading emergencies...</p>
         </div>
 
     </div>
